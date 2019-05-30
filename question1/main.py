@@ -28,12 +28,16 @@ class LineUtil:
         :type line2: Line
         """
         if line1.p1 < line2.p1 and line1.p2 <= line2.p1:
+            # if line 1 lies to the left of line 2 return false.
             return False
         elif line1.p1 < line2.p1 <= line1.p2:
+            # if first coordinate of line2 lies between the points of line1 then return true.
             return True
         elif line2.p1 <= line1.p1 and line2.p2 <= line1.p1:
+            # if line2 lies to the left of line1 return false.
             return False
         elif line2.p1 <= line1.p1 <= line2.p2:
+            # if first coordinate of line1 lies between the points of line2 then return true.
             return True
 
 
